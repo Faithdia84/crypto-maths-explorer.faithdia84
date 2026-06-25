@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Lightbulb, ChevronLeft, ChevronRight } from "lucide-react";
+import { Lightbulb, ChevronLeft, ChevronRight, Calendar } from "lucide-react";
 
 const facts = [
   {
@@ -46,8 +46,26 @@ const facts = [
   },
 ];
 
+const dailyFacts = [
+  { emoji: "🗝️", title: "The Vigenère Cipher", body: "The Vigenère cipher was called 'le chiffre indéchiffrable' (the indecipherable cipher) for 300 years before it was finally cracked in 1863!", color: "from-purple-600 to-blue-600" },
+  { emoji: "🤫", title: "Steganography", body: "Ancient Greeks would shave a messenger's head, tattoo a secret message on their scalp, then wait for the hair to grow back before sending them — a form of steganography (hidden writing)!", color: "from-green-600 to-teal-600" },
+  { emoji: "🔑", title: "One-Time Pad", body: "The one-time pad is the only encryption system that is mathematically proven to be 100% unbreakable — as long as you use a truly random key and never reuse it!", color: "from-orange-500 to-pink-600" },
+  { emoji: "📦", title: "Public Key Magic", body: "Public key cryptography (used for HTTPS) lets two strangers encrypt messages to each other without ever sharing a secret in advance — it's mathematical magic invented in 1976!", color: "from-cyan-500 to-blue-600" },
+  { emoji: "🧮", title: "AES is Super Fast", body: "AES encryption (the standard used worldwide) can encrypt over 1 billion bytes per second on a modern computer — fast enough to encrypt an entire HD movie in milliseconds!", color: "from-rose-500 to-red-600" },
+  { emoji: "🕵️", title: "Mary Queen of Scots", body: "Mary Queen of Scots used a substitution cipher to plot against Queen Elizabeth I. When her coded letters were deciphered, the evidence led to her execution in 1587!", color: "from-indigo-500 to-violet-600" },
+  { emoji: "🌍", title: "Navajo Code Talkers", body: "During World War II, the US military used Navajo Native Americans to send coded messages. The Navajo language was so complex that the enemy never cracked it!", color: "from-amber-500 to-orange-600" },
+];
+
+function getDailyFact() {
+  const dayIndex = Math.floor(Date.now() / 86400000);
+  return dailyFacts[dayIndex % dailyFacts.length];
+}
+
 export default function FunFacts() {
   const [active, setActive] = useState(0);
+  const daily = getDailyFact();
+
+  const today = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 
   const prev = () => setActive((a) => (a - 1 + facts.length) % facts.length);
   const next = () => setActive((a) => (a + 1) % facts.length);
@@ -65,6 +83,32 @@ export default function FunFacts() {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Cryptography has a fascinating history and shapes our modern world!
           </p>
+        </div>
+
+        <div className={`bg-gradient-to-r ${daily.color} rounded-3xl p-6 sm:p-8 mb-10 text-white shadow-2xl`}>
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0">
+              <div className="bg-white/20 rounded-2xl p-3 flex items-center gap-2">
+                <Calendar className="w-5 h-5" />
+                <span className="font-bold text-sm hidden sm:block">Today</span>
+              </div>
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  Today's Cryptography Fact — {today}
+                </span>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-black mb-2 flex items-center gap-2">
+                <span>{daily.emoji}</span> {daily.title}
+              </h3>
+              <p className="text-white/90 text-sm sm:text-base leading-relaxed">{daily.body}</p>
+            </div>
+          </div>
+          <div className="mt-4 flex items-center gap-2">
+            <Lightbulb className="w-4 h-4 text-white/60" />
+            <span className="text-white/60 text-xs">A new fact every day — come back tomorrow!</span>
+          </div>
         </div>
 
         <div className="relative max-w-3xl mx-auto mb-10">
