@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto text-center">
         <div className="flex items-center justify-center gap-2 text-primary font-bold text-xl mb-3">
           <Lock className="w-5 h-5" />
-          Cryptography Using Mathematics
+          Mystery Messaging Machine
         </div>
 
         <div className="section-divider w-48 mx-auto mb-6" />

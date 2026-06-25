@@ -22,8 +22,8 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-4xl mx-auto animate-slide-in-up">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-white mb-6 leading-tight">
-          Cryptography
-          <span className="block gradient-text">Using Mathematics</span>
+          Mystery
+          <span className="block gradient-text">Messaging Machine</span>
         </h1>
 
         <p className="text-xl sm:text-2xl text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed">

@@ -25,7 +25,7 @@ export default function Navbar({ dark, setDark }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2 font-bold text-primary text-lg shrink-0">
           <Lock className="w-5 h-5" />
-          <span className="hidden sm:block">CryptoMath</span>
+          <span className="hidden sm:block">Mystery Messaging Machine</span>
         </a>
 
         <div className="hidden xl:flex items-center gap-0.5">
