@@ -1,0 +1,214 @@
+Create a complete, professional, interactive website called:
+
+"Cryptography Using Mathematics"
+
+This is a Class 7 Mathematics Project and should look modern, colorful, educational, and impressive.
+
+MAIN GOAL:
+Teach users about cryptography and allow them to experiment with different encryption and encoding methods.
+
+---
+
+## HOME PAGE
+
+* Attractive hero section
+* Animated title
+* Introduction to Cryptography
+* Why cryptography is important
+* Real-life uses:
+
+  * Banking
+  * Passwords
+  * Cybersecurity
+  * Online Shopping
+  * Messaging Apps
+  * Government Security
+
+---
+
+## HISTORY SECTION
+
+* History of Cryptography
+* Julius Caesar and Caesar Cipher
+* Evolution of secret communication
+* Interesting facts
+
+---
+
+## CIPHER LAB
+
+Create separate cards or tabs for each cipher.
+
+1. Caesar Cipher
+
+* Message input
+* Secret key input (1-25)
+* Encrypt button
+* Decrypt button
+* Step-by-step letter conversion
+* Example:
+  HELLO → KHOOR
+
+2. Number Cipher
+
+* A=1, B=2, C=3 ... Z=26
+* Encrypt
+* Decrypt
+* Example:
+  HELLO → 8 5 12 12 15
+
+3. Morse Code
+
+* Convert text to Morse code
+* Convert Morse code to text
+* Example:
+  HELLO → .... . .-.. .-.. ---
+
+4. Reverse Cipher
+
+* Example:
+  HELLO → OLLEH
+
+5. Symbol Cipher
+
+* Use a custom symbol table
+* Example:
+  A=@
+  B=#
+  C=$
+  D=%
+  E=&
+  F=*
+* Encrypt and decrypt
+
+6. Binary Converter
+
+* Convert text to binary
+* Convert binary to text
+* Example:
+  A → 01000001
+
+---
+
+## QR CODE SECTION
+
+* Generate QR code from encrypted text
+* QR code updates automatically
+* Download QR code button
+
+---
+
+## MATHEMATICS SECTION
+
+Explain cryptography using Class 7 language.
+
+Include:
+
+* Patterns
+* Number systems
+* Letter shifting
+* Codes and symbols
+* Modular arithmetic (simple explanation)
+* Mathematical logic
+
+Provide worked examples.
+
+---
+
+## STEP-BY-STEP VISUALIZATION
+
+Show how encryption happens letter by letter.
+
+Example:
+
+HELLO
+
+H → K
+E → H
+L → O
+L → O
+O → R
+
+---
+
+## CRYPTOGRAPHY QUIZ
+
+Create a quiz with at least 10 questions.
+
+Features:
+
+* Multiple choice
+* Score calculation
+* Final result
+* Restart quiz button
+
+---
+
+## CIPHER CHALLENGE GAME
+
+Create a mini game.
+
+Features:
+
+* Show encrypted messages
+* User must decode them
+* Award points
+* Show score
+* Different difficulty levels
+
+---
+
+## FUN FACTS SECTION
+
+Include interesting cryptography facts.
+
+---
+
+## TOOLS
+
+* Copy result button
+* Clear button
+* Save history
+* Download result as text
+* Dark mode toggle
+* Light mode toggle
+
+---
+
+## DESIGN
+
+* Beautiful animations
+* Professional appearance
+* Glassmorphism cards
+* Responsive design
+* Works on desktop and mobile
+* Attractive fonts and icons
+
+---
+
+## CONCLUSION
+
+Summarize how mathematics helps protect information.
+
+---
+
+## FOOTER
+
+Created by [Your Name]
+Class 7 Mathematics Project
+
+---
+
+## TECHNICAL REQUIREMENTS
+
+Use HTML, CSS and JavaScript.
+
+Generate all necessary files.
+
+Ensure all cipher methods work correctly.
+
+Ensure encrypt and decrypt functions work.
+
+Ensure QR code generation works.
+
+Ensure the website is ready to publish.

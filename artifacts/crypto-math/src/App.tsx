@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import Hero from "./components/Hero";
 import WhatIsCrypto from "./components/WhatIsCrypto";
-import CaesarCipher from "./components/CaesarCipher";
+import HistorySection from "./components/HistorySection";
+import CipherLab from "./components/CipherLab";
 import MathSection from "./components/MathSection";
 import Quiz from "./components/Quiz";
+import CipherChallenge from "./components/CipherChallenge";
 import FunFacts from "./components/FunFacts";
 import Conclusion from "./components/Conclusion";
 import Footer from "./components/Footer";
@@ -28,9 +30,11 @@ export default function App() {
       <main>
         <Hero />
         <WhatIsCrypto />
-        <CaesarCipher />
+        <HistorySection />
+        <CipherLab />
         <MathSection />
         <Quiz />
+        <CipherChallenge />
         <FunFacts />
         <Conclusion />
       </main>
