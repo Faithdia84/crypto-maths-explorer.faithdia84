@@ -2,14 +2,18 @@ import { useState, useEffect } from "react";
 import Hero from "./components/Hero";
 import WhatIsCrypto from "./components/WhatIsCrypto";
 import HistorySection from "./components/HistorySection";
+import CipherComparison from "./components/CipherComparison";
 import CipherLab from "./components/CipherLab";
 import MathSection from "./components/MathSection";
 import Quiz from "./components/Quiz";
 import CipherChallenge from "./components/CipherChallenge";
+import SecretAgentMode from "./components/SecretAgentMode";
+import StatsSection from "./components/StatsSection";
 import FunFacts from "./components/FunFacts";
 import Conclusion from "./components/Conclusion";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Toast from "./components/Toast";
 
 export default function App() {
   const [dark, setDark] = useState(false);
@@ -31,14 +35,18 @@ export default function App() {
         <Hero />
         <WhatIsCrypto />
         <HistorySection />
+        <CipherComparison />
         <CipherLab />
         <MathSection />
         <Quiz />
         <CipherChallenge />
+        <SecretAgentMode />
+        <StatsSection />
         <FunFacts />
         <Conclusion />
       </main>
       <Footer />
+      <Toast />
     </div>
   );
 }
