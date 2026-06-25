@@ -27,11 +27,6 @@ export default function Hero() {
       ))}
 
       <div className="relative z-10 max-w-4xl mx-auto animate-slide-in-up">
-        <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-6 text-sm text-white/80">
-          <Shield className="w-4 h-4 text-purple-400" />
-          Class 7 Mathematics Project
-        </div>
-
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-white mb-6 leading-tight">
           Cryptography
           <span className="block gradient-text">Using Mathematics</span>

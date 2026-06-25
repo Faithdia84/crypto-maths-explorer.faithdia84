@@ -11,11 +11,8 @@ export default function Footer() {
 
         <div className="section-divider w-48 mx-auto mb-6" />
 
-        <p className="text-muted-foreground text-sm mb-2">
-          Created with <Heart className="w-4 h-4 text-red-500 inline mx-1" /> by a Class 7 Student
-        </p>
-        <p className="text-muted-foreground text-sm font-semibold mb-6">
-          Class 7 Mathematics Project &nbsp;|&nbsp; 2025–2026
+        <p className="text-muted-foreground text-sm mb-6">
+          Created with <Heart className="w-4 h-4 text-red-500 inline mx-1" /> for the love of mathematics
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground mb-8">

@@ -90,9 +90,6 @@ export default function Conclusion() {
           <p className="text-white/90 text-lg leading-relaxed max-w-2xl mx-auto">
             "Mathematics is not just numbers and equations in a classroom — it is the invisible force that protects the digital world. Every letter you shift, every modular calculation you perform, brings you one step closer to understanding the code that keeps billions of people safe every single day."
           </p>
-          <div className="mt-6 text-white/70 text-sm">
-            — Class 7 Mathematics Project
-          </div>
         </div>
       </div>
     </section>
