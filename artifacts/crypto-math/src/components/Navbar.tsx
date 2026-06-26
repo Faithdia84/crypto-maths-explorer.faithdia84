@@ -7,17 +7,20 @@ interface NavbarProps {
 }
 
 const links = [
-  { href: "#what-is-crypto", label: "Intro" },
-  { href: "#history",        label: "History" },
-  { href: "#comparison",     label: "Compare" },
-  { href: "#cipher-lab",     label: "Cipher Lab" },
-  { href: "#math",           label: "Maths" },
-  { href: "#quiz",           label: "Quiz" },
-  { href: "#challenge",      label: "Challenge" },
-  { href: "#agent",          label: "🕵️ Agent" },
-  { href: "#stats",          label: "Stats" },
-  { href: "#fun-facts",      label: "Fun Facts" },
-  { href: "#codebreaker",    label: "🔓 Lab" },
+  { href: "#what-is-crypto",  label: "Intro" },
+  { href: "#history",         label: "History" },
+  { href: "#comparison",      label: "Compare" },
+  { href: "#cipher-lab",      label: "Cipher Lab" },
+  { href: "#math",            label: "Maths" },
+  { href: "#quiz",            label: "Quiz" },
+  { href: "#challenge",       label: "Challenge" },
+  { href: "#agent",           label: "🕵️ Agent" },
+  { href: "#spy-dashboard",   label: "⭐ Dashboard" },
+  { href: "#stats",           label: "Stats" },
+  { href: "#fun-facts",       label: "Fun Facts" },
+  { href: "#codebreaker",     label: "🔓 Lab" },
+  { href: "#memory-match",    label: "🃏 Match" },
+  { href: "#password-tools",  label: "🔑 Passwords" },
 ];
 
 export default function Navbar({ dark, setDark }: NavbarProps) {
