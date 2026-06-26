@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Hero from "./components/Hero";
 import WhatIsCrypto from "./components/WhatIsCrypto";
 import HistorySection from "./components/HistorySection";
@@ -12,29 +12,32 @@ import SpyDashboard from "./components/SpyDashboard";
 import StatsSection from "./components/StatsSection";
 import FunFacts from "./components/FunFacts";
 import CodeBreakerLab from "./components/CodeBreakerLab";
-import PasswordTools from "./components/PasswordTools";
 import MemoryMatch from "./components/MemoryMatch";
+import CipherWheel from "./components/CipherWheel";
+import DailySecretMessage from "./components/DailySecretMessage";
+import RandomMessageGen from "./components/RandomMessageGen";
+import PasswordTools from "./components/PasswordTools";
 import Conclusion from "./components/Conclusion";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Toast from "./components/Toast";
 import SettingsPanel from "./components/SettingsPanel";
 import { Keyboard, X } from "lucide-react";
-import { showToast } from "./utils/toast";
 
-const SHORTCUTS: { key: string; desc: string; action: string }[] = [
-  { key: "Alt + H", desc: "Go to Home",        action: "home" },
-  { key: "Alt + L", desc: "Open Cipher Lab",   action: "cipher-lab" },
-  { key: "Alt + Q", desc: "Start Quiz",        action: "quiz" },
-  { key: "Alt + D", desc: "Spy Dashboard",     action: "spy-dashboard" },
-  { key: "Alt + B", desc: "Code Breaker Lab",  action: "codebreaker" },
-  { key: "Alt + P", desc: "Password Tools",    action: "password-tools" },
+const SHORTCUTS = [
+  { key: "Alt + H", desc: "Go to Home",          section: "top" },
+  { key: "Alt + L", desc: "Open Cipher Lab",     section: "cipher-lab" },
+  { key: "Alt + Q", desc: "Start Quiz",          section: "quiz" },
+  { key: "Alt + D", desc: "Spy Dashboard",       section: "spy-dashboard" },
+  { key: "Alt + B", desc: "Code Breaker Lab",    section: "codebreaker" },
+  { key: "Alt + P", desc: "Password Tools",      section: "password-tools" },
+  { key: "Alt + W", desc: "Cipher Wheel",        section: "cipher-wheel" },
+  { key: "Alt + M", desc: "Daily Message",       section: "daily-message" },
 ];
 
 export default function App() {
   const [dark, setDark] = useState(false);
   const [showShortcuts, setShowShortcuts] = useState(false);
-  const memoryRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const saved = localStorage.getItem("darkMode");
@@ -50,13 +53,16 @@ export default function App() {
     const handler = (e: KeyboardEvent) => {
       if (!e.altKey) return;
       const key = e.key.toLowerCase();
-      if (key === "h") { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }
-      else if (key === "l") { e.preventDefault(); document.getElementById("cipher-lab")?.scrollIntoView({ behavior: "smooth" }); }
-      else if (key === "q") { e.preventDefault(); document.getElementById("quiz")?.scrollIntoView({ behavior: "smooth" }); }
-      else if (key === "d") { e.preventDefault(); document.getElementById("spy-dashboard")?.scrollIntoView({ behavior: "smooth" }); }
-      else if (key === "b") { e.preventDefault(); document.getElementById("codebreaker")?.scrollIntoView({ behavior: "smooth" }); }
-      else if (key === "p") { e.preventDefault(); document.getElementById("password-tools")?.scrollIntoView({ behavior: "smooth" }); }
-      else if (key === "k") { e.preventDefault(); setShowShortcuts((s) => !s); }
+      const map: Record<string, string> = { h: "top", l: "cipher-lab", q: "quiz", d: "spy-dashboard", b: "codebreaker", p: "password-tools", w: "cipher-wheel", m: "daily-message" };
+      if (map[key]) {
+        e.preventDefault();
+        const el = document.getElementById(map[key]);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+        else window.scrollTo({ top: 0, behavior: "smooth" });
+      } else if (key === "k") {
+        e.preventDefault();
+        setShowShortcuts((s) => !s);
+      }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
@@ -79,6 +85,7 @@ export default function App() {
         <StatsSection />
         <FunFacts />
         <CodeBreakerLab />
+
         <section id="memory-match" className="py-20 px-4 bg-muted/30">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
@@ -97,6 +104,10 @@ export default function App() {
             </div>
           </div>
         </section>
+
+        <CipherWheel />
+        <DailySecretMessage />
+        <RandomMessageGen />
         <PasswordTools />
         <Conclusion />
       </main>

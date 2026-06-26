@@ -20,6 +20,9 @@ const links = [
   { href: "#fun-facts",       label: "Fun Facts" },
   { href: "#codebreaker",     label: "🔓 Lab" },
   { href: "#memory-match",    label: "🃏 Match" },
+  { href: "#cipher-wheel",    label: "🎡 Wheel" },
+  { href: "#daily-message",   label: "📅 Daily" },
+  { href: "#message-gen",     label: "📨 Messages" },
   { href: "#password-tools",  label: "🔑 Passwords" },
 ];
 
