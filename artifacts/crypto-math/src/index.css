@@ -135,3 +135,8 @@
   background: linear-gradient(90deg, #8b5cf6, #3b82f6, #06b6d4, #10b981, #f59e0b, #ef4444);
   border-radius: 2px;
 }
+
+@keyframes cb-fall {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}

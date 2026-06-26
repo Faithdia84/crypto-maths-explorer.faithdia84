@@ -17,6 +17,7 @@ const links = [
   { href: "#agent",          label: "🕵️ Agent" },
   { href: "#stats",          label: "Stats" },
   { href: "#fun-facts",      label: "Fun Facts" },
+  { href: "#codebreaker",    label: "🔓 Lab" },
 ];
 
 export default function Navbar({ dark, setDark }: NavbarProps) {

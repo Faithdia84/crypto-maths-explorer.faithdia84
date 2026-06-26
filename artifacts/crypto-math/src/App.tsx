@@ -10,6 +10,7 @@ import CipherChallenge from "./components/CipherChallenge";
 import SecretAgentMode from "./components/SecretAgentMode";
 import StatsSection from "./components/StatsSection";
 import FunFacts from "./components/FunFacts";
+import CodeBreakerLab from "./components/CodeBreakerLab";
 import Conclusion from "./components/Conclusion";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -43,6 +44,7 @@ export default function App() {
         <SecretAgentMode />
         <StatsSection />
         <FunFacts />
+        <CodeBreakerLab />
         <Conclusion />
       </main>
       <Footer />
